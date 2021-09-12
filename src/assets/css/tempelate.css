@@ -1,0 +1,230 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header{
+    float: left;
+    right: 0;
+    margin-left: 17%;
+    background: #0b0b5c;
+    transition: all .6s ease-in;
+}
+
+/* sidebar */
+
+.sidebar{
+    padding-top: 30px;
+    background: #050546;
+    position: fixed;
+    left: 0;
+    min-width: 17%;
+    max-width: 90%;
+    height: 100%;
+    float: left;
+    margin-top: -24px;
+    transition: all 0.6s ease-in;
+}
+.sidebar .user-profile{
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+.sidebar h4{
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.sidebar a{
+    color: #ffffff;
+    justify-content: space-between;
+    -webkit-transition: background 2s;
+    transition: background 2s;
+}
+.sidebar a:hover{
+    background: #040470e0;
+    color: #fffccc;
+    transition: all 1s ease-in-out;
+}
+.sidebar a span,.sidebar a span:hover{
+    font-size: 20px;
+    font-weight: 300;
+}
+.sidebar a i{
+    font-size: 20px;
+    font-weight: 300;
+}
+.sidebar .active{
+    background: #111168;
+    color: #fffccc;
+}
+label #sidebar-btn{
+    z-index: 1;
+    color: cornsilk;
+    font-size: 24px;
+    position: fixed;
+    cursor: pointer;
+    margin: 5px 0;
+    margin-top: -20px;
+}
+
+.sidebar>center>a:hover{
+    background: none;
+}
+
+/* container center */
+.contain{
+    width: 80%;
+    margin-left: 6%;
+    transition: all 0.2s ease-in;
+}
+
+.contain>.containers{
+   left: 200px;
+   margin-left: 17%;
+   width: max-content;
+   max-width: 100%;
+   margin-top: 5%;
+}
+.contain>.container{
+   margin-left: 16%;
+}
+
+/* check */
+
+#check:checked ~ *.sidebar{
+   left: -180px;
+   margin-top: -24px;       
+   transition: all 0.6s ease-in;
+}
+#check:checked ~.sidebar a span{
+   display: none;
+}
+
+
+#check:checked ~.sidebar a i{
+   display: block;
+}
+#check:checked ~.sidebar a{
+   font-size: 20px;
+   margin-left: 170px;
+   padding-right: 23px;
+   width: max-content;
+}
+#check:checked ~.sidebar p{
+   display: none;
+}
+
+#check:checked ~.sidebar img{
+    display: none;
+}
+#check:checked ~ .header{
+   width: 100% ;
+   margin-left: 3.6%;
+   right: 0%;
+   margin-top: 0px;
+   top: 0%;
+}
+#check:checked ~header{
+   position: fixed;
+   width: 1em;;
+}
+#check{
+  visibility: hidden;
+}
+#check:checked ~ .contain{
+margin-left: 4%;
+width: 95%;
+transition: all .2s ease-in;
+}
+
+#check:checked ~ .contain .containers{
+  margin-left: 1%;
+  width: 100%;
+  right: 0%;
+}
+#check:checked ~ .contain .container{
+  margin-left: 6%;
+}
+
+
+
+@media screen and (max-width:992px) {
+    .row-offcanvas{
+        position: relative;
+        -webkit-transition: all 0.25s ease-out;
+        -moz-transition: all 0.25s ease-out;
+        transition: all 0.25s ease-out;
+    }
+    .row-offcanvas-left>.sidebar-offcanvas{
+        left: -33%;
+    }
+    .row-offcanvas-left .active{
+        left: 33%;
+        margin-left: -6px;
+    }
+
+    .sidebar-offcanvas{
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 45%;
+    }
+
+    .header{
+        width: 100%;
+        left: -83px;
+    }
+
+    .sidebar{
+        display: none;
+    }
+    
+    #check:checked ~ .sidebar{
+        display: block;
+    }
+    #check:checked ~.header{
+        left: -17px;
+    }
+}
+
+@media screen and (max-width:34em) {
+    .row-offcanvas-left .sidebar-offcanvas{
+        left: -45%;
+    }
+    .row-offcanvas-left .active{
+        left: 45%;
+        margin-left: -6px;
+    }
+
+    .sidebar-offcanvas{
+        width: 45%;
+    }
+}
+
+.card{
+    overflow: hidden;
+}
+
+.card-box {
+border: 1px solid #ddd;
+padding: 20px;
+box-shadow: 0px 0px 10px 0px #c5c5c5;
+margin-bottom: 30px;
+float: left;
+border-radius: 10px;
+}
+.card-box .card-thumbnail {
+max-height: 200px;
+overflow: hidden;
+border-radius: 10px;
+transition: 1s;
+}
+.card-box .card-thumbnail:hover {
+transform: scale(1.2);
+}
+.card-box h3 a {
+font-size: 20px;
+text-decoration: none;
+}

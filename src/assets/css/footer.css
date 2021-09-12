@@ -1,0 +1,35 @@
+.footer{
+    padding: 30px;
+    background: #13335b;
+    margin-left: 15%;
+    width: 85%;
+}
+
+.footer #subscribe input{
+     outline: none;
+}
+.footer #subscribe input::placeholder{
+    color: #ffffff !important;
+   
+}
+.footer>.row>div> h5{
+     border-bottom:  1px solid #ffc107 !important;
+
+}
+@media screen and (max-width:992px) {
+    .footer{
+        width: 90%;
+        margin-left: 10%;
+        text-align: center;
+    }
+
+}
+
+@media screen and (max-width:34em) {
+        /* footer */
+        .footer{
+            width: 100%;
+            margin-left: 0%;
+            text-align: center;
+        }
+}
